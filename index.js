@@ -28,10 +28,10 @@ app.get("/githubuser", (req, res, next) => {
       let publicReposAmount = data.public_repos;
       switch (publicReposAmount) {
         case undefined:
-          res.send('und')
+          res.send(`User doesn't exist`);
           break;
         case 0:
-          res.send('No repos found');
+          res.send("No repos found");
           //No repos
           break;
 
@@ -39,31 +39,13 @@ app.get("/githubuser", (req, res, next) => {
           fetch(`https://api.github.com/users/${req.query.user}/repos`)
             .then((response) => response.json())
             .then((data) => {
-              let publicRepos = data
+              let publicRepos = data;
               console.log(data);
               res.render("search-result", { publicRepos });
             });
           break;
       }
-
-      // console.log(data.public_repos);
     });
-
-  // .then((data) => console.log(data));
-  // let publicRepos = data.body.public_repos;
-  // res.render('search-result', { publicRepos })
-
-  // (data.public_repos != 0)
-  // ?
-  // fetch(`https://api.github.com/users/${req.query.user}/repos`)
-  // res.render("search-result")
-  // :
-
-  // if (data.public_repos != null) {
-  //   fetch(`https://api.github.com/users/${req.query.user}/repos`)
-  //     .then((response) => response.json())
-  //     .then((datarepos) => console.log('repos' + datarepos));
-  // }
 });
 
 // Create HTTP server
