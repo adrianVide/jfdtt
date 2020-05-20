@@ -31,10 +31,9 @@ p {
 }
 @media only screen and (min-width: 767px) {
   .card:hover {
-    /* transform: scale(1.02); */
     z-index: 999;
     border: 2px solid rgba(0, 255, 131, 1);
-    box-shadow: 0px 4px 10px grey;
+    box-shadow: 0px 15px 10px lightgrey;
   }
 }
 .card-img {
