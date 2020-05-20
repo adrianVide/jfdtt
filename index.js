@@ -1,9 +1,9 @@
 var express = require("express");
 var http = require("http");
 const hbs = require("hbs");
-
 const fetch = require("node-fetch");
 
+// Public dir
 var app = express();
 app.use(express.static(__dirname + "/public"));
 
@@ -19,12 +19,13 @@ app.get("/", function (req, res) {
   res.render("index.hbs");
 });
 
-// User
+// User fetch
 app.get("/githubuser", (req, res, next) => {
   fetch(`https://api.github.com/users/${req.query.user}`)
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
+      let {user} = req.query;
       let publicReposAmount = data.public_repos;
       switch (publicReposAmount) {
         case undefined:
@@ -41,7 +42,7 @@ app.get("/githubuser", (req, res, next) => {
             .then((data) => {
               let publicRepos = data;
               console.log(data);
-              res.render("search-result", { publicRepos });
+              res.render("search-result", { publicRepos, user });
             });
           break;
       }
