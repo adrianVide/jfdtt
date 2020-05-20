@@ -25,8 +25,18 @@ app.get("/githubuser", (req, res, next) => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
+
+      if (data.public_repos != 0) {
+        fetch(`https://api.github.com/users/${req.query.user}/repos`)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            res.render("search-result", { publicRepos });
+          });
+      }
+
       let publicRepos = data.public_repos;
-      res.render("search-result", { publicRepos });
+      console.log(data.public_repos);
     });
 
   // .then((data) => console.log(data));
