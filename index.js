@@ -29,7 +29,7 @@ app.get("/githubuser", (req, res, next) => {
       let publicReposAmount = data.public_repos;
       switch (publicReposAmount) {
         case undefined:
-          res.send(`User doesn't exist`);
+          res.render("404", { user });
           break;
         case 0:
           res.send("No repos found");
