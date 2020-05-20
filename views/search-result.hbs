@@ -1,6 +1,6 @@
-<h1>{{user}}</h1>
+<h1 class="sr-title">Showing <b>{{user}}</b>'s repos on Github</h1>
 
-<div class="cards-container cards">
+<div class="cards">
     {{#each publicRepos}}
     {{> repoCard this}}
     {{/each}}

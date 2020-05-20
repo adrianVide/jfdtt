@@ -5,6 +5,7 @@ html {
 }
 
 .card {
+  border-radius: 10px 10px 10px 10px;
   background: white;
   text-decoration: none;
   color: #444;
@@ -12,12 +13,31 @@ html {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  position: relative;
+  top: 0;
+  transition: all 0.1s ease-in;
 }
 
+.card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
 .cards {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.sr-title {
+  text-align: center;
+  margin: 5vw;
+  margin-top: 2vw;
+  color: darkgrey;
 }
