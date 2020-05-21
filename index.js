@@ -32,7 +32,7 @@ app.get("/githubuser", (req, res, next) => {
           res.render("404", { user });
           break;
         case 0:
-          res.send("No repos found");
+          res.render("no-repo", { user });
           //No repos
           break;
 
