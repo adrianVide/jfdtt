@@ -1,0 +1,38 @@
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+        {{!-- <img src="https://loremflickr.com/1920/1080/coding?random=2" style="width:100%"> --}}
+        <img alt="San Francisco Office"
+            srcset="/images/SFoffice.webp 1080w, /images/SFoffice.webp@0.75x 810w, /images/SFoffice.webp@0.5x 540w, /images/SFoffice.webp@0.75x 270w"
+            style="width:100%">
+        <div class="text">San Francisco</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img alt="Berlin coworking space"
+            srcset="/images/BerlinCoworking.webp 1080w, /images/BerlinCoworking.webp@0.75x 810w, /images/BerlinCoworking.webp@0.5x 540w, /images/BerlinCoworking.webp@0.75x 270w"
+            style="width:100%">
+        <div class="text">Berlin</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img alt="Barcelona coworking space"
+            srcset="/images/BarcelonaCoworking.webp 1080w, /images/BarcelonaCoworking.webp@0.75x 810w, /images/BarcelonaCoworking.webp@0.5x 540w, /images/BarcelonaCoworking.webp@0.75x 270w"
+            style="width:100%">
+        <div class="text">Barcelona</div>
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
