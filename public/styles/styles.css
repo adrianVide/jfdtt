@@ -192,12 +192,13 @@ h1 {
 .prev,
 .next {
   cursor: pointer;
+  background-color: white;
   position: absolute;
   top: 50%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: rgba(0, 255, 131, 1);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -214,13 +215,15 @@ h1 {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 255, 131, 1);
+  color: white;
 }
 
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 15px;
+  font-size: 4vw;
+  font-weight: 600;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
