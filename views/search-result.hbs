@@ -1,10 +1,8 @@
 <div class="top">{{> goBack}}
-                <h1 class="title">Showing <span class="username">{{user}}</span>'s repos on Github</h1>
-            </span></div>
+    <h1 class="title">Showing <span class="username">{{user}}</span>'s repos on Github</h1>
+    </span></div>
 {{> searchBar }}
-
 <p class="disclaimer pb">*pictures might not be related to content</p>
-
 <div class="cards">
     {{#each publicRepos}}
     {{> repoCard this}}
