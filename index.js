@@ -28,12 +28,13 @@ app.get("/githubuser", (req, res, next) => {
       let {user} = req.query;
       let publicReposAmount = data.public_repos;
       switch (publicReposAmount) {
+        
         case undefined:
           res.render("404", { user });
           break;
+
         case 0:
           res.render("no-repo", { user });
-          //No repos
           break;
 
         default:
