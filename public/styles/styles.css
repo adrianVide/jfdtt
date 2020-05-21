@@ -16,6 +16,11 @@
   margin-bottom: 40px;
 }
 
+.no-decoration {
+  text-decoration: none;
+  color: rgba(0, 255, 131, 1);
+}
+
 body {
   margin: 0px;
   min-height: 100vh;
@@ -46,11 +51,6 @@ footer {
   text-align: center;
   font-weight: bold;
 }
-
-/* .front {
-  z-index: 999;
-  position: absolute;
-} */
 
 .card {
   border: 2px solid rgba(0, 0, 0, 0);
@@ -156,7 +156,7 @@ h1 {
 }
 
 .main-search-bar {
-  margin: 3vw;
+  margin: 1vh;
 }
 
 .top {
