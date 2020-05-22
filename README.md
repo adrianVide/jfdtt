@@ -17,15 +17,15 @@ Platform to search for Github users and display their repositories
 ## Usage:
 
 
-Run 'npm i' on root folder
-Run 'npm start' on root folder
-It will run on http://localhost:3000
+- **Run ```npm i``` on root folder**
+- **Run ```npm start``` on root folder**
+- **It will run on http://localhost:3000**
 
 
 
 ## Technology
 
 
-NodeJS
-ExpressJS
-Handlebars
+- **NodeJS**
+- **ExpressJS**
+- **Handlebars**
