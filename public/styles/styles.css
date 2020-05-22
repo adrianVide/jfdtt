@@ -6,6 +6,14 @@
   padding: 0;
 }
 
+h1 {
+  text-align: center;
+  margin: 5vw;
+  margin-top: 2vw;
+  color: darkgrey;
+  /* display: inline-block; */
+}
+
 .pb {
   padding-bottom: 1vw;
 }
@@ -136,13 +144,7 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-h1 {
-  text-align: center;
-  margin: 5vw;
-  margin-top: 2vw;
-  color: darkgrey;
-  display: inline-block;
-}
+
 
 .nav-back {
   display: inline-block;
