@@ -52,6 +52,6 @@ app.get("/githubuser", (req, res, next) => {
 var server = http.createServer(app);
 
 // Listen on provided port
-server.listen(3000);
+server.listen(3001);
 server.on("error", (error) => console.log("Error" + error));
 server.on("listening", () => console.log("Listening"));
